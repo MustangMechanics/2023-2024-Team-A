@@ -10,6 +10,7 @@
 // ---- START VEXCODE CONFIGURED DEVICES ----
 // Robot Configuration:
 // [Name]               [Type]        [Port(s)]
+// Drivetrain           drivetrain    1, 2, 3, 4, 5   
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
 #include "vex.h"
@@ -26,6 +27,7 @@ void init()
 
   vexcodeInit();
 
+  DrivetrainGPS.calibrate();
   //Inertial.startCalibration(2000);
   
   task::sleep(2100);

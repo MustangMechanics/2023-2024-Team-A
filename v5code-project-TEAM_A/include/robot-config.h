@@ -3,6 +3,8 @@ using namespace vex;
 extern brain Brain;
 
 // VEXcode devices
+extern smartdrive Drivetrain;
+extern gps DrivetrainGPS;
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Pro.
