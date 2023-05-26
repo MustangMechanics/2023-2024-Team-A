@@ -9,13 +9,13 @@ brain  Brain;
 
 // VEXcode device constructors
 motor leftMotorA = motor(PORT1, ratio18_1, false);
-motor leftMotorB = motor(PORT2, ratio18_1, false);
+motor leftMotorB = motor(PORT3, ratio18_1, false);
 motor_group LeftDriveSmart = motor_group(leftMotorA, leftMotorB);
-motor rightMotorA = motor(PORT3, ratio18_1, true);
-motor rightMotorB = motor(PORT4, ratio18_1, true);
+motor rightMotorA = motor(PORT6, ratio18_1, true);
+motor rightMotorB = motor(PORT2, ratio18_1, true);
 motor_group RightDriveSmart = motor_group(rightMotorA, rightMotorB);
-gps DrivetrainGPS = gps(PORT5, 0.00, 0.00, mm, 180);
-smartdrive Drivetrain = smartdrive(LeftDriveSmart, RightDriveSmart, DrivetrainGPS, 319.19, 320, 40, mm, 1);
+gps DrivetrainGPS = gps(PORT11, 0.00, 100.00, mm, 180);
+smartdrive Drivetrain = smartdrive(LeftDriveSmart, RightDriveSmart, DrivetrainGPS, 299.24, 320, 40, mm, 1);
 
 // VEXcode generated functions
 

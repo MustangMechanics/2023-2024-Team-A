@@ -10,47 +10,39 @@
 // ---- START VEXCODE CONFIGURED DEVICES ----
 // Robot Configuration:
 // [Name]               [Type]        [Port(s)]
-// Drivetrain           drivetrain    1, 2, 3, 4, 5   
+// Drivetrain           drivetrain    1, 3, 6, 2, 11  
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
-#include "vex.h"
-#include "driverFunctions.h"
 #include "autonFunctions.h"
+#include "driverFunctions.h"
 #include "universalFunctions.h"
+#include "vex.h"
 
 using namespace vex;
 
 competition Competition;
 
-void init()
-{
+void init() {
 
   vexcodeInit();
 
   DrivetrainGPS.calibrate();
-  //Inertial.startCalibration(2000);
-  
+  // Inertial.startCalibration(2000);
+
   task::sleep(2100);
-
 }
 
-void auton()
-{
-  autonCaller();
+void auton() { 
+  autonCaller(); 
 }
 
-
-void usercontrol()
-{
-  driver();
-}
+void usercontrol() { driver(); }
 
 int main() {
   // Initializing Robot Configuration. DO NOT REMOVE!
-  init();  
+  init();
 
   Competition.autonomous(auton);
   Competition.drivercontrol(usercontrol);
-  //auton();
-  
+  auton();
 }
